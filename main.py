@@ -3,7 +3,6 @@ import os
 
 
 LOG_PATH = "/var/log"
-TEST_PATH = "./tests/tt"
 
 
 def convert(path):
@@ -22,7 +21,7 @@ def convert(path):
 
 
 def main():
-    convert(TEST_PATH)
+    convert(LOG_PATH)
 
 
 if __name__ == "__main__":
