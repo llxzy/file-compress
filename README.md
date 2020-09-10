@@ -13,7 +13,7 @@ python3 main.py /var/log
 Alternatively, you may set up the script as a cron job. The included ```run.sh``` script does this, with default values being repeating monthly and the directory being ```/var/log```, you can change those values by editing the ```run.sh``` file yourself.
 Then, run the following
 ```
-chmod +x
+chmod +x run.sh
 ./run.sh
 ```
 to set the shell file as executable and run the script.
