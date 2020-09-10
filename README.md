@@ -16,7 +16,7 @@ Then, run the following
 chmod +x run.sh
 ./run.sh
 ```
-to set the shell file as executable and run the script.
+to set the bash script as executable and run the script.
 
 
 
