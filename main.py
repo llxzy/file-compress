@@ -1,8 +1,6 @@
 import gzip
 import os
-
-
-LOG_PATH = "/var/log"
+import sys
 
 
 def convert(path):
@@ -21,7 +19,9 @@ def convert(path):
 
 
 def main():
-    convert(LOG_PATH)
+    if not len(sys.argv) == 2:
+        sys.stderr.write("Usage: main.py <path-to-directory>") 
+    convert(sys.argv[1])
 
 
 if __name__ == "__main__":

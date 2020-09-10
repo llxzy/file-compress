@@ -1,7 +1,7 @@
 import unittest
 import os
-import main
-
+#import main
+from main import convert
 
 def create_file(filepath):
     with open(filepath, "w") as f:
@@ -14,7 +14,7 @@ class ConvertTest(unittest.TestCase):
         input_path = "./tests/first/"
         self.assertTrue(len(os.listdir(input_path)) == 1)
         self.assertTrue(os.path.exists(input_path + "a"))
-        main.convert(input_path)
+        convert(input_path)
         self.assertTrue(len(os.listdir(input_path)) == 1)
         self.assertTrue(os.path.exists(input_path + "a.gz"))
         self.assertFalse(os.path.exists(input_path + "a"))
@@ -31,7 +31,7 @@ class ConvertTest(unittest.TestCase):
         self.assertTrue(os.path.exists(input_path + "c"))
         self.assertTrue(os.path.exists(input_path + "a.gz"))
         self.assertTrue(os.path.isdir(input_path + "b"))
-        main.convert(input_path)
+        convert(input_path)
         self.assertTrue(len(os.listdir(input_path)) == 3)
         self.assertTrue(os.path.exists(input_path + "c.gz"))
         self.assertFalse(os.path.exists(input_path + "c"))
