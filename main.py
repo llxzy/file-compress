@@ -21,6 +21,7 @@ def convert(path):
 def main():
     if not len(sys.argv) == 2:
         sys.stderr.write("Usage: main.py <path-to-directory>") 
+        return
     convert(sys.argv[1])
 
 
